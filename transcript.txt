@@ -1,0 +1,27 @@
+$ python3 caesar.py --mode encrypt --text "Attack at Dawn." --shift 5
+Fyyfhp fy Ifbs.
+
+$ python3 caesar.py --mode decrypt --text "Fyyfhp fy Ifbs." --shift 5
+Attack at Dawn.
+
+$ python3 caesar.py --mode encrypt --text "Hello, World! 123" --shift 3
+Khoor, Zruog! 123
+
+$ python3 caesar.py --mode decrypt --text "Khoor, Zruog! 123" --shift 3
+Hello, World! 123
+
+$ python3 caesar.py
+
+Choose mode - (E)ncrypt / (D)ecrypt / (Q)uit: E
+Enter your text: Meet me at midnight
+Enter shift value (e.g., 3): 7
+
+--- RESULT ---
+Mode      : encrypt
+Shift     : 7
+Input     : Meet me at midnight
+Output    : Tlla tl ha tpkupnoa
+------------------------------
+
+Choose mode - (E)ncrypt / (D)ecrypt / (Q)uit: Q
+Exiting. Goodbye!
