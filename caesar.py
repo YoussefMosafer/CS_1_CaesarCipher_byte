@@ -1,39 +1,12 @@
-"""
-Caesar Cipher - Text Encryption & Decryption Tool
-Task 1 - AVIP 2026 (Cybersecurity Track) - B.Y.T.E by Arithmatrix
-
-This program encrypts or decrypts text using the Caesar Cipher technique.
-It supports configurable shift values and preserves all non-alphabet
-characters (spaces, numbers, punctuation) unchanged.
-
-Usage (interactive):
-    python caesar.py
-
-Usage (command-line):
-    python caesar.py --mode encrypt --text "Hello, World!" --shift 3
-    python caesar.py --mode decrypt --text "Khoor, Zruog!" --shift 3
-"""
-
 import argparse
 import sys
 
 
 def caesar_shift(text: str, shift: int, mode: str) -> str:
-    """
-    Shift each alphabetic character in `text` by `shift` positions.
-
-    - mode='encrypt' shifts forward (A -> D for shift=3)
-    - mode='decrypt' shifts backward (D -> A for shift=3)
-    - Non-alphabet characters (spaces, digits, punctuation) are
-      returned unchanged.
-    - Works on both uppercase and lowercase letters, preserving case.
-    - Shift values can be negative or larger than 26; they wrap
-      correctly using modulo arithmetic.
-    """
+    
     if mode == "decrypt":
         shift = -shift
 
-    # Normalize shift to a value between 0 and 25
     shift = shift % 26
 
     result = []
@@ -45,14 +18,12 @@ def caesar_shift(text: str, shift: int, mode: str) -> str:
             shifted = (ord(char) - ord('a') + shift) % 26 + ord('a')
             result.append(chr(shifted))
         else:
-            # Non-alphabet characters stay exactly as they are
             result.append(char)
 
     return "".join(result)
 
 
 def run_interactive():
-    """Simple interactive CLI menu for manual use/demo."""
     print("=" * 50)
     print("        CAESAR CIPHER TOOL")
     print("=" * 50)
@@ -98,18 +69,15 @@ def main():
 
     args = parser.parse_args()
 
-    # If all CLI arguments are provided, run directly (non-interactive mode)
     if args.mode and args.text is not None and args.shift is not None:
         output = caesar_shift(args.text, args.shift, args.mode)
         print(output)
         return
 
-    # If some but not all arguments were passed, that's a usage error
     if args.mode or args.text is not None or args.shift is not None:
         print("Error: --mode, --text, and --shift must ALL be provided together.")
         sys.exit(1)
 
-    # Otherwise, fall back to interactive mode
     run_interactive()
 
 
