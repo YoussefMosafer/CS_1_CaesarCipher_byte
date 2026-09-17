@@ -1,0 +1,93 @@
+$ python3 caesar.py --mode encrypt --text "Youssef Mosafer" --shift 20
+Siommyz Gimuzyl
+
+$ python3 caesar.py --mode decrypt --text "Siommyz Gimuzyl" --shift 20
+Youssef Mosafer
+
+$ python3 caesar.py --mode encrypt --text "CyberSecurity 2026" --shift 9
+LhknaBnldarch 2026
+
+$ python3 caesar.py --mode decrypt --text "LhknaBnldarch 2026" --shift 9
+CyberSecurity 2026
+
+$ python3 caesar.py --mode encrypt --text "ArithMatrix" --shift 27
+BsjuiNbusjy
+
+
+$ python3 caesar.py --mode decrypt --text "BsjuiNbusjy" --shift 27
+ArithMatrix
+
+$ python3 caesar.py
+
+Choose mode - (E)ncrypt / (D)ecrypt / (Q)uit: E
+Enter your text: Youssef Mosafer
+Enter shift value (e.g., 3): 20
+
+--- RESULT ---
+Mode      : encrypt
+Shift     : 20
+Input     : Youssef Mosafer
+Output    : Siommyz Gimuzyl
+------------------------------
+
+Choose mode - (E)ncrypt / (D)ecrypt / (Q)uit: D
+Enter your text: Siommyz Gimuzyl
+Enter shift value (e.g., 3): 20
+
+--- RESULT ---
+Mode      : decrypt
+Shift     : 20
+Input     : Siommyz Gimuzyl
+Output    : Youssef Mosafer
+------------------------------
+
+Choose mode - (E)ncrypt / (D)ecrypt / (Q)uit: 
+
+Choose mode - (E)ncrypt / (D)ecrypt / (Q)uit: E
+Enter your text: CyberSecurity 2026
+Enter shift value (e.g., 3): 9
+
+--- RESULT ---
+Mode      : encrypt
+Shift     : 9
+Input     : CyberSecurity 2026
+Output    : LhknaBnldarch 2026
+------------------------------
+
+Choose mode - (E)ncrypt / (D)ecrypt / (Q)uit: D
+Enter your text: LhknaBnldarch 2026 
+Enter shift value (e.g., 3): 9
+
+--- RESULT ---
+Mode      : decrypt
+Shift     : 9
+Input     : LhknaBnldarch 2026
+Output    : CyberSecurity 2026
+------------------------------
+
+Choose mode - (E)ncrypt / (D)ecrypt / (Q)uit: 
+
+Choose mode - (E)ncrypt / (D)ecrypt / (Q)uit: E
+Enter your text: ArithMatrix
+Enter shift value (e.g., 3): 27
+
+--- RESULT ---
+Mode      : encrypt
+Shift     : 27
+Input     : ArithMatrix
+Output    : BsjuiNbusjy
+------------------------------
+
+Choose mode - (E)ncrypt / (D)ecrypt / (Q)uit: D
+Enter your text: BsjuiNbusjy
+Enter shift value (e.g., 3): 27
+
+--- RESULT ---
+Mode      : decrypt
+Shift     : 27
+Input     : BsjuiNbusjy
+Output    : ArithMatrix
+------------------------------
+
+Choose mode - (E)ncrypt / (D)ecrypt / (Q)uit: q
+Exiting. Goodbye!
